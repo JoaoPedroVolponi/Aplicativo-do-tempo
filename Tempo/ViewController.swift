@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 70, weight: .bold)
         label.text = "25°C"
         label.textAlignment = .left
-        label.textColor = UIColor(named: "primaryColor")
+        label.textColor = UIColor(named: "bluePrimary")
         return label
     }()
     
@@ -56,6 +56,14 @@ class ViewController: UIViewController {
         imageView.image = UIImage(named: "daylight")
         imageView.contentMode = .scaleAspectFit
         return imageView
+    }()
+    
+    // Humidity StackView
+    private lazy var humidityStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [humidityLabel, humidityValueLabel])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        return stackView
     }()
     
     // Humidity Label
@@ -78,6 +86,48 @@ class ViewController: UIViewController {
         return label
     }()
     
+    // Wind StackView
+    private lazy var windStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [windLabel, windValueLabel])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        return stackView
+    }()
+    
+    // Wind Label
+    private lazy var windLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Vento"
+        label.font =  UIFont.systemFont(ofSize: 12, weight: .semibold)
+        label.textColor = UIColor(named: "whiteColor")
+        return label
+    }()
+    
+    // Wind Value Label
+    private lazy var windValueLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "10km/h"
+        label.font =  UIFont.systemFont(ofSize: 12, weight: .semibold)
+        label.textColor = UIColor(named: "whiteColor")
+        return label
+    }()
+    
+    // Stats StackView
+    private lazy var statsStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [humidityStackView, windStackView])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.backgroundColor = UIColor(named: "blueSecundary")
+        stackView.axis = .vertical
+        stackView.spacing = 3
+        stackView.layer.cornerRadius = 10
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 12, leading: 24, bottom: 12, trailing: 24)
+        return stackView
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setHierarchy()
@@ -88,9 +138,13 @@ class ViewController: UIViewController {
     private func setHierarchy() {
         view.addSubview(backgroundView)
         view.addSubview(headerView)
+        view.addSubview(statsStackView)
+        
+        // HeaderView
         headerView.addSubview(cityLabel)
         headerView.addSubview(temperatureLabel)
         headerView.addSubview(weatherIcon)
+        
     }
     
     private func setContraints() {
@@ -129,6 +183,14 @@ class ViewController: UIViewController {
             weatherIcon.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -26),
             weatherIcon.centerYAnchor.constraint(equalTo: temperatureLabel.centerYAnchor),
             weatherIcon.leadingAnchor.constraint(equalTo: temperatureLabel.trailingAnchor, constant: 15),
+        ])
+        
+        
+        // StatsStackView
+        NSLayoutConstraint.activate([
+            statsStackView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 24),
+            statsStackView.widthAnchor.constraint(equalToConstant: 206),
+            statsStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
     }
