@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     private lazy var headerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(named: "whiteColor")
         view.layer.cornerRadius = 20
         return view
     }()
@@ -56,6 +56,26 @@ class ViewController: UIViewController {
         imageView.image = UIImage(named: "daylight")
         imageView.contentMode = .scaleAspectFit
         return imageView
+    }()
+    
+    // Humidity Label
+    private lazy var humidityLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Umidade"
+        label.font =  UIFont.systemFont(ofSize: 12, weight: .semibold)
+        label.textColor = UIColor(named: "whiteColor")
+        return label
+    }()
+    
+    // Humidity Value Label
+    private lazy var humidityValueLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "100mm"
+        label.font =  UIFont.systemFont(ofSize: 12, weight: .semibold)
+        label.textColor = UIColor(named: "whiteColor")
+        return label
     }()
     
     override func viewDidLoad() {
