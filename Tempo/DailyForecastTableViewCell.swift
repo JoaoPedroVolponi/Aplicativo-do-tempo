@@ -89,8 +89,8 @@ class DailyForecastTableViewCell: UITableViewCell {
         // StackView
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -15),
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
     }

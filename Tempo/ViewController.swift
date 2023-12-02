@@ -132,7 +132,7 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.whiteColor
-        label.text = "Previsão por Hora"
+        label.text = "PREVISÃO POR HORA"
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         label.textAlignment = .center
         return label
@@ -157,7 +157,7 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.whiteColor
-        label.text = "Próximos Dias"
+        label.text = "PRÓXIMOS DIAS"
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         label.textAlignment = .center
         return label
@@ -165,15 +165,15 @@ class ViewController: UIViewController {
     
     // DailyForecast TableView
     private lazy var dailyForecastTableView: UITableView = {
-         let tableView = UITableView()
-         tableView.translatesAutoresizingMaskIntoConstraints = false
-         tableView.backgroundColor = .clear
-         tableView.dataSource = self
-         tableView.register(DailyForecastTableViewCell.self,
-                            forCellReuseIdentifier: DailyForecastTableViewCell.identifier)
-         tableView.separatorColor = UIColor.white
-         return tableView
-     }()
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .clear
+        tableView.dataSource = self
+        tableView.register(DailyForecastTableViewCell.self,
+                           forCellReuseIdentifier: DailyForecastTableViewCell.identifier)
+        tableView.separatorColor = UIColor.white
+        return tableView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -213,7 +213,7 @@ class ViewController: UIViewController {
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60),
             headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
             headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
-            headerView.heightAnchor.constraint(equalToConstant: 169),
+            headerView.heightAnchor.constraint(equalToConstant: 150),
         ])
         
         // CityLabel
@@ -226,7 +226,7 @@ class ViewController: UIViewController {
         
         // TemperatureLabel
         NSLayoutConstraint.activate([
-            temperatureLabel.topAnchor.constraint(equalTo: cityLabel.bottomAnchor, constant: 26),
+            temperatureLabel.topAnchor.constraint(equalTo: cityLabel.bottomAnchor, constant: 12),
             temperatureLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 26)
         ])
         
@@ -270,7 +270,7 @@ class ViewController: UIViewController {
         
         // DailyForecastTableView
         NSLayoutConstraint.activate([
-            dailyForecastTableView.topAnchor.constraint(equalTo: dailyForecastLabel.bottomAnchor, constant: 30),
+            dailyForecastTableView.topAnchor.constraint(equalTo: dailyForecastLabel.bottomAnchor, constant: 16),
             dailyForecastTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             dailyForecastTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             dailyForecastTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant:  0)
