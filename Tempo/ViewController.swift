@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     private lazy var weatherIcon: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "daylight")
+        imageView.image = UIImage(named: "sunIcon")
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -171,7 +171,7 @@ class ViewController: UIViewController {
          tableView.dataSource = self
          tableView.register(DailyForecastTableViewCell.self,
                             forCellReuseIdentifier: DailyForecastTableViewCell.identifier)
-         tableView.separatorColor = UIColor.contrastColor
+         tableView.separatorColor = UIColor.white
          return tableView
      }()
     

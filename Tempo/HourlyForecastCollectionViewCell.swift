@@ -52,7 +52,7 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "daylight")
+        imageView.image = UIImage(named: "sunIcon")
         return imageView
     }()
     
