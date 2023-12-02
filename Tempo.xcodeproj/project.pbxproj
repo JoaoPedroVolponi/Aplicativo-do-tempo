@@ -14,6 +14,7 @@
 		81C7A8042B16850F00406274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C7A8022B16850F00406274 /* LaunchScreen.storyboard */; };
 		81C7A80C2B1837AE00406274 /* HourlyForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7A80B2B1837AE00406274 /* HourlyForecastCollectionViewCell.swift */; };
 		81C7A80E2B1A473C00406274 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7A80D2B1A473C00406274 /* Color+Extensions.swift */; };
+		81C7A8112B1ADF1600406274 /* DailyForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7A8102B1ADF1600406274 /* DailyForecastTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		81C7A8052B16850F00406274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81C7A80B2B1837AE00406274 /* HourlyForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastCollectionViewCell.swift; sourceTree = "<group>"; };
 		81C7A80D2B1A473C00406274 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		81C7A8102B1ADF1600406274 /* DailyForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				81C7A7F92B16850D00406274 /* SceneDelegate.swift */,
 				81C7A7FB2B16850D00406274 /* ViewController.swift */,
 				81C7A80B2B1837AE00406274 /* HourlyForecastCollectionViewCell.swift */,
+				81C7A8102B1ADF1600406274 /* DailyForecastTableViewCell.swift */,
 				81C7A80F2B1A474400406274 /* Util */,
 				81C7A8002B16850F00406274 /* Assets.xcassets */,
 				81C7A8022B16850F00406274 /* LaunchScreen.storyboard */,
@@ -150,6 +153,7 @@
 			files = (
 				81C7A80E2B1A473C00406274 /* Color+Extensions.swift in Sources */,
 				81C7A7FC2B16850D00406274 /* ViewController.swift in Sources */,
+				81C7A8112B1ADF1600406274 /* DailyForecastTableViewCell.swift in Sources */,
 				81C7A7F82B16850D00406274 /* AppDelegate.swift in Sources */,
 				81C7A80C2B1837AE00406274 /* HourlyForecastCollectionViewCell.swift in Sources */,
 				81C7A7FA2B16850D00406274 /* SceneDelegate.swift in Sources */,
