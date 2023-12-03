@@ -175,11 +175,20 @@ class ViewController: UIViewController {
         return tableView
     }()
     
+    private let service = Service()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        service.fetchData(city: City(lat: "-23.6814346", lon: "-46.9249599", name: "São Paulo")) { message in
+            print(message)
+        }
+        setupView()
+        
+    }
+    
+    private func setupView() {
         setHierarchy()
         setContraints()
-        
     }
     
     private func setHierarchy() {
