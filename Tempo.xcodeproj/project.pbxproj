@@ -16,6 +16,7 @@
 		81C7A80E2B1A473C00406274 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7A80D2B1A473C00406274 /* Color+Extensions.swift */; };
 		81C7A8112B1ADF1600406274 /* DailyForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7A8102B1ADF1600406274 /* DailyForecastTableViewCell.swift */; };
 		81C7A8142B1B995600406274 /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7A8132B1B995600406274 /* ServiceAPI.swift */; };
+		81C7A8162B1E620400406274 /* Core+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7A8152B1E620400406274 /* Core+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		81C7A80D2B1A473C00406274 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		81C7A8102B1ADF1600406274 /* DailyForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastTableViewCell.swift; sourceTree = "<group>"; };
 		81C7A8132B1B995600406274 /* ServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
+		81C7A8152B1E620400406274 /* Core+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				81C7A80D2B1A473C00406274 /* Color+Extensions.swift */,
+				81C7A8152B1E620400406274 /* Core+Extensions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				81C7A80E2B1A473C00406274 /* Color+Extensions.swift in Sources */,
 				81C7A7FC2B16850D00406274 /* ViewController.swift in Sources */,
 				81C7A8112B1ADF1600406274 /* DailyForecastTableViewCell.swift in Sources */,
+				81C7A8162B1E620400406274 /* Core+Extensions.swift in Sources */,
 				81C7A7F82B16850D00406274 /* AppDelegate.swift in Sources */,
 				81C7A80C2B1837AE00406274 /* HourlyForecastCollectionViewCell.swift in Sources */,
 				81C7A7FA2B16850D00406274 /* SceneDelegate.swift in Sources */,
