@@ -197,7 +197,7 @@ class ViewController: UIViewController {
     
     private func loadData() {
         cityLabel.text = city.name
-        temperatureLabel.text = "\(Int(forecastResponse?.current.temp ?? 0 ))°C"
+        temperatureLabel.text = forecastResponse?.current.temp.toCelsius()
         humidityValueLabel.text = "\(forecastResponse?.current.humidity ?? 00)mm"
         windValueLabel.text = "\(forecastResponse?.current.windSpeed ?? 00)km/h"
     }
@@ -316,9 +316,10 @@ extension ViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HourlyForecastCollectionViewCell", for: indexPath) as? HourlyForecastCollectionViewCell else {
             return UICollectionViewCell()
         }
-        let forcast = forecastResponse?.hourly[indexPath.row]
         
-        cell?.loadData(time: <#T##String#>, icon: <#T##UIImage#>, temp: <#T##String#>)
+        let forecast = forecastResponse?.hourly[indexPath.row]
+    
+        cell?.loadData(time: forecast?.dt.toHourFormat(), icon: "sunIcon", temp: forecast?.temp.toCelsius())
         
         
         return cell
