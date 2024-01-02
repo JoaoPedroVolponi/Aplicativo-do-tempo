@@ -319,9 +319,11 @@ extension ViewController: UICollectionViewDataSource {
         
         let forecast = forecastResponse?.hourly[indexPath.row]
     
-        cell?.loadData(time: forecast?.dt.toHourFormat(), icon: "sunIcon", temp: forecast?.temp.toCelsius())
+//        cell.loadData(time: forecast?.dt.toHourFormat(), icon: "sunIcon", temp: forecast?.temp.toCelsius())
         
-        
+        cell.loadData(time: forecast?.dt.toHourFormat(),
+                           icon: UIImage(named: forecast?.weather.first?.icon ?? ""),
+                           temp: forecast?.temp.toCelsius())
         return cell
     }
     
