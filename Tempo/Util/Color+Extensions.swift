@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    static let whiteColor = UIColor(named: "whiteColor")
-    static let bluePrimaryColor = UIColor(named: "bluePrimary")
-    static let blueSecundaryColor = UIColor(named: "blueSecundary")
+    static let contrastColor = UIColor(named: "contrastColor")
+    static let primaryColor = UIColor(named: "primaryColor")
+    static let softGray = UIColor(named: "softGray")
 }
+

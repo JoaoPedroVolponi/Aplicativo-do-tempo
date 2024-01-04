@@ -5,8 +5,6 @@
 //  Created by João Pedro Rosada Volponi on 02/12/23.
 //
 
-
-
 import Foundation
 
 struct City {
@@ -18,7 +16,7 @@ struct City {
 class Service {
     
     private let baseURL: String = "https://api.openweathermap.org/data/3.0/onecall"
-    private let apiKey: String = "aff2288a0cf08358f4a4e56f014cbede"
+    private let apiKey: String = "API_KEY"
     private let session = URLSession.shared
     
     func fecthData(city: City, _ completion: @escaping (ForecastResponse?) -> Void) {
@@ -59,7 +57,7 @@ struct Forecast: Codable {
     let humidity: Int
     let windSpeed: Double
     let weather: [Weather]
-    
+
     enum CodingKeys: String, CodingKey {
         case dt, temp, humidity
         case windSpeed = "wind_speed"
