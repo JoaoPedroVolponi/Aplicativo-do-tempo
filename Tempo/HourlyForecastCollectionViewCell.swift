@@ -7,52 +7,51 @@
 
 import UIKit
 
+
 class HourlyForecastCollectionViewCell: UICollectionViewCell {
     
-    let identifier: String = "HourlyForecastCollectionViewCell"
+    static let indentifier: String = "HourlyForecast"
     
-    //StackView
     private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [hourLabel, iconImageView, temperatureLabel])
+        let stackView = UIStackView(arrangedSubviews: [hourLabel,
+                                                       iconImageView,
+                                                       temperatureLabel])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 4
-        stackView.layer.borderWidth = 0.3
-        stackView.layer.cornerRadius = 20
-        stackView.layer.borderColor = UIColor.whiteColor?.cgColor
-        stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
         stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 8,
+                                                                     leading: 8,
+                                                                     bottom: 8,
+                                                                     trailing: 8)
+        stackView.layer.borderWidth = 1
+        stackView.layer.borderColor = UIColor.contrastColor?.cgColor
+        stackView.layer.cornerRadius = 20
         return stackView
     }()
     
-    // HourLabel
     private lazy var hourLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-//        label.text = "13:00"
-        label.textColor = UIColor(named: "whiteColor")
-        label.textAlignment = .center
+        label.textColor = UIColor.contrastColor
         label.font = UIFont.systemFont(ofSize: 10, weight: .semibold)
+        label.textAlignment = .center
         return label
     }()
     
-    // TemperatureLabel
     private lazy var temperatureLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-//        label.text = "25°C"
-        label.textColor = UIColor(named: "whiteColor")
-        label.textAlignment = .center
+        label.textColor = UIColor.contrastColor
         label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        label.textAlignment = .center
         return label
     }()
     
-    //IconImage
     private lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
-//        imageView.image = UIImage(named: "sunIcon")
         return imageView
     }()
     
@@ -65,7 +64,6 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     func loadData(time: String?, icon: UIImage?, temp: String?) {
         hourLabel.text = time
         iconImageView.image = icon
@@ -75,28 +73,17 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
     private func setupView() {
         setHierarchy()
         setConstraints()
-        
     }
-    
     
     private func setHierarchy() {
         contentView.addSubview(stackView)
-        
     }
     
     private func setConstraints() {
-        // StackView
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
-        ])
+        stackView.setConstraintsToParent(contentView)
         
-        // IconImage
         NSLayoutConstraint.activate([
             iconImageView.heightAnchor.constraint(equalToConstant: 33)
         ])
     }
-    
 }
