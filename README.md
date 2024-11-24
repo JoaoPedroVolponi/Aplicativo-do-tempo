@@ -1,16 +1,16 @@
 # Aplicativo do tempo
 
 ## 📒 Sobre
-<p align="center">Aplicativo que demonstra a Tabela do campeonato Brasileiro</p>
+<p align="center">Aplicativo do tempo</p>
 
 ## 🛠️ Tecnologias e Ferramentas
 - Swift
-- Uikit
+- UIKit
 - MVC
 
 ## ▶️ Funcionalidades
-- Consumo da API - https://www.api-futebol.com.br/
-- Tabela completa do campeonato Brasileiro
+- Consumo da API - https://openweathermap.org/
+- Temperatura atual 
 
 ### 📱 Capturas de tela do aplicativo
 
