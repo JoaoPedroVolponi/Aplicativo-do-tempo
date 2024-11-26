@@ -10,7 +10,8 @@
 
 ## ▶️ Funcionalidades
 - Consumo da API - https://openweathermap.org/
-- Temperatura atual 
+- Temperatura atual
+- Temperatura dos próximos dias
 
 ### 📱 Capturas de tela do aplicativo
 
