@@ -16,7 +16,7 @@ struct City {
 class Service {
     
     private let baseURL: String = "https://api.openweathermap.org/data/3.0/onecall"
-    private let apiKey: String = "API_KEY"
+    private let apiKey: String = "6f893a0d8b9d8ad2e8dd2f0e5a508580"
     private let session = URLSession.shared
     
     func fecthData(city: City, _ completion: @escaping (ForecastResponse?) -> Void) {
